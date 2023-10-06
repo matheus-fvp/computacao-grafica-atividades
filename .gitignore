@@ -1,0 +1,36 @@
+# Arquivos binários
+*.o
+*.out
+*.exe
+
+# Arquivos de compilação e build
+build/
+bin/
+
+# Arquivos de depuração
+*.dSYM/
+*.pdb
+
+# Arquivos temporários
+*.swp
+*~
+
+# Arquivos de configuração do editor
+.vscode/
+.idea/
+
+# Arquivos de saída do CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+CMakeSettings.json
+compile_commands.json
+Makefile
+cmake_install.cmake
+CTestTestfile.cmake
+
+# Dependências geradas pelo CMake
+CMakeFiles/
+CMakeScripts/
+CMakeCache.txt
+CTestTestfile.cmake
