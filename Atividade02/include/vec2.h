@@ -47,6 +47,10 @@ public:
 
 using point2 = vec2;
 
+inline bool operator==(const vec2 &u, const vec2 &v) {
+    return u.x() == v.x() && u.y() == v.y();  
+}
+
 inline std::ostream& operator<<(std::ostream &out, const vec2 &v) {
     return out << v.e[0] << ' ' << v.e[1];
 }
@@ -77,10 +81,6 @@ inline vec2 operator/(vec2 v, double t) {
 
 inline double dot(const vec2 &u, const vec2 &v) {
     return u.e[0] * v.e[0] + u.e[1] * v.e[1];
-}
-
-inline double cross(const vec2 &u, const vec2 &v) {
-    return u.e[0] * v.e[1] - u.e[1] * v.e[0];
 }
 
 inline vec2 unit_vector(vec2 v) {
