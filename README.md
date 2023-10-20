@@ -35,8 +35,9 @@
 </details>
 
 <details>
-    <summary><h2>Atividade 02</h2></summary>
+  <summary><h2>Atividade 02</h2></summary>
 
-    O objetivo desta atividade é desenvolver classes para manipulação de vetores em matrizes. Ao todo forma desenvolvidas 5 classes sendo elas: Vec2, Vec4, Mat2, Mat3, Mat4.
+  O objetivo desta atividade é desenvolver classes para manipulação de vetores e matrizes. Ao todo forma desenvolvidas 5 classes sendo elas: Vec2, Vec4, Mat2, Mat3, Mat4.
+
 </details>
 
