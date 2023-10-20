@@ -34,3 +34,9 @@
   Para usar a classe `ImageManager`, você deve instanciá-la e, em seguida, chamar os métodos relevantes para criar e salvar as imagens desejadas. Certifique-se de ter o ImageMagick++ configurado e instalado em seu ambiente antes de usar essa classe. 
 </details>
 
+<details>
+    <summary><h2>Atividade 02</h2></summary>
+
+    O objetivo desta atividade é desenvolver classes para manipulação de vetores em matrizes. Ao todo forma desenvolvidas 5 classes sendo elas: Vec2, Vec4, Mat2, Mat3, Mat4.
+</details>
+
