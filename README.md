@@ -41,3 +41,12 @@
 
 </details>
 
+</details>
+
+<details>
+  <summary><h2>Atividade 03</h2></summary>
+
+  O objetivo desta atividade é desenvolver uma classe própria para ler modelos obj.
+
+</details>
+
