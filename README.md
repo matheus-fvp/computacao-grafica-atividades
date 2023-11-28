@@ -37,8 +37,12 @@
 <details>
   <summary><h2>Atividade 02</h2></summary>
 
-  O objetivo desta atividade é desenvolver classes para manipulação de vetores e matrizes. Ao todo forma desenvolvidas 5 classes sendo elas: Vec2, Vec4, Mat2, Mat3, Mat4.
-
+  O objetivo desta atividade é desenvolver classes para manipulação de vetores e matrizes. Ao todo forma desenvolvidas 5 classes sendo elas:
+  - `mat2` - A classe `mat2` representa uma matriz 2x2, comumente utilizada em transformações bidimensionais. Fornece operações básicas, como adição, subtração, multiplicação e divisão. A classe também inclui funções utilitárias para transposição e inversão da matriz.
+  - `mat3` - A classe `mat3` é uma implementação de matriz 3x3, estendendo a funcionalidade da mat2 para suportar transformações tridimensionais. Suporta operações fundamentais e funções utilitárias para transposição e inversão.
+  - `mat4` - A classe `mat4` é uma matriz 4x4 projetada para aplicações gráficas tridimensionais. Inclui operações para translação, rotação, escala e projeção perspectiva. Suporta operações básicas e funções utilitárias.
+  - `vec2` - A classe `vec2` representa um vetor 2D, frequentemente utilizado em operações geométricas em espaço bidimensional. Inclui operadores para adição, subtração, multiplicação, divisão e produto escalar. A classe também fornece funções para calcular o comprimento e normalização do vetor.
+  - `vec4` - A classe `vec4` estende a funcionalidade da vec2 para um vetor 4D, útil em gráficos 3D e coordenadas homogêneas. Inclui operadores e funções semelhantes, proporcionando uma representação conveniente para pontos ou direções em quatro dimensões.
 </details>
 
 </details>
