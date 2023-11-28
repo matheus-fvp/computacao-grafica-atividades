@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+/**
+ * @class mat3
+ * @brief A 3x3 matrix class with basic operations.
+ */
 class mat3 {
 public:
     double data[3][3];
@@ -27,6 +31,11 @@ public:
         data[2][2] = i;
     }
 
+    /**
+     * @brief Overloaded assignment operator for addition.
+     * @param other The matrix to be added.
+     * @return Reference to the modified matrix.
+     */
     mat3& operator+=(const mat3& other) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -36,6 +45,11 @@ public:
         return *this;
     }
 
+    /**
+     * @brief Overloaded assignment operator for scalar multiplication.
+     * @param scalar The scalar value to multiply the matrix by.
+     * @return Reference to the modified matrix.
+     */
     mat3& operator*=(double scalar) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -45,14 +59,30 @@ public:
         return *this;
     }
 
+    /**
+     * @brief Overloaded assignment operator for scalar division.
+     * @param scalar The scalar value to divide the matrix by.
+     * @return Reference to the modified matrix.
+     * @throws Exception if division by zero is attempted.
+     */
     mat3& operator/=(double scalar) {
         return *this *= (1.0 / scalar);
     }
 
+    /**
+     * @brief Overloaded subscript operator for element access.
+     * @param i Row index.
+     * @return Pointer to the specified row of the matrix.
+     */
     double* operator[](int i) {
         return data[i];
     }
 
+    /**
+     * @brief Overloaded const subscript operator for element access.
+     * @param i Row index.
+     * @return Const pointer to the specified row of the matrix.
+     */
     const double* operator[](int i) const {
         return data[i];
     }
@@ -60,6 +90,12 @@ public:
 
 // Matrix Utility Functions
 
+/**
+ * @brief Overloaded stream insertion operator for matrix output.
+ * @param out Output stream.
+ * @param m The matrix to be printed.
+ * @return Reference to the output stream.
+ */
 inline std::ostream& operator<<(std::ostream& out, const mat3& m) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -70,6 +106,12 @@ inline std::ostream& operator<<(std::ostream& out, const mat3& m) {
     return out;
 }
 
+/**
+ * @brief Overloaded equality operator for matrix comparison.
+ * @param m1 The first matrix.
+ * @param m2 The second matrix.
+ * @return True if the matrices are equal, false otherwise.
+ */
 inline bool operator==(const mat3 &m1, const mat3 &m2) {
     for(int i = 0; i < 3; i++) {
         for(int j = 0; j < 3; j++) {
@@ -79,6 +121,12 @@ inline bool operator==(const mat3 &m1, const mat3 &m2) {
     return true;
 }
 
+/**
+ * @brief Overloaded addition operator for matrix addition.
+ * @param a The first matrix.
+ * @param b The second matrix.
+ * @return The resulting matrix after addition.
+ */
 inline mat3 operator+(const mat3& a, const mat3& b) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
@@ -89,6 +137,12 @@ inline mat3 operator+(const mat3& a, const mat3& b) {
     return result;
 }
 
+/**
+ * @brief Overloaded subtraction operator for matrix subtraction.
+ * @param a The first matrix.
+ * @param b The second matrix.
+ * @return The resulting matrix after subtraction.
+ */
 inline mat3 operator-(const mat3& a, const mat3& b) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
@@ -99,6 +153,12 @@ inline mat3 operator-(const mat3& a, const mat3& b) {
     return result;
 }
 
+/**
+ * @brief Overloaded multiplication operator for matrix multiplication.
+ * @param a The first matrix.
+ * @param b The second matrix.
+ * @return The resulting matrix after multiplication.
+ */
 inline mat3 operator*(const mat3& a, const mat3& b) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
@@ -113,6 +173,12 @@ inline mat3 operator*(const mat3& a, const mat3& b) {
     return result;
 }
 
+/**
+ * @brief Overloaded multiplication operator for scalar multiplication.
+ * @param a The matrix.
+ * @param scalar The scalar value.
+ * @return The resulting matrix after scalar multiplication.
+ */
 inline mat3 operator*(const mat3& a, double scalar) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
@@ -123,14 +189,31 @@ inline mat3 operator*(const mat3& a, double scalar) {
     return result;
 }
 
+/**
+ * @brief Overloaded multiplication operator for scalar multiplication (scalar * matrix).
+ * @param scalar The scalar value.
+ * @param a The matrix.
+ * @return The resulting matrix after scalar multiplication.
+ */
 inline mat3 operator*(double scalar, const mat3& a) {
     return a * scalar;
 }
 
+/**
+ * @brief Overloaded division operator for scalar division (matrix / scalar).
+ * @param a The matrix.
+ * @param scalar The scalar value.
+ * @return The resulting matrix after scalar division.
+ */
 inline mat3 operator/(const mat3& a, double scalar) {
     return a * (1.0 / scalar);
 }
 
+/**
+ * @brief Transposes the given matrix.
+ * @param m The matrix to be transposed.
+ * @return The transposed matrix.
+ */
 inline mat3 transpose(const mat3& m) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
