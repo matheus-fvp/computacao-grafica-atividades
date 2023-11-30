@@ -1,15 +1,16 @@
 package edu.mfvp;
 
 import edu.mfvp.models.Face;
-import edu.mfvp.models.ObjModel;
+import edu.mfvp.models.ObjLoader;
 import edu.mfvp.models.Vertex;
 
 
 public class App 
 {
     public static void main(String[] args) {
-        ObjModel model = new ObjModel();
-        model.loadModel("./src/assets/Male.obj");
+        ObjLoader model = new ObjLoader();
+
+        model.loadObj("assets/cubes.obj");
 
         for (Vertex vertex : model.getVertices()) {
             System.out.println("Vertex: (" + vertex.getX() + ", " + vertex.getY() + ", " + vertex.getZ() + ")");
