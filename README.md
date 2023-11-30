@@ -49,7 +49,18 @@
 
 <details>
   <summary><h2>Atividade 03</h2></summary>
+  
+  # 3D Model Loader
+  Este projeto contém uma aplicação Java simples para carregar e salvar modelos 3D no formato de arquivo Wavefront OBJ. A aplicação é composta por três classes principais: `Vertex`, `Face` e `ObjLoader`. Essas classes fornecem funcionalidades para representar e carregar modelos 3D.
 
-  O objetivo desta atividade é desenvolver uma classe própria para ler modelos obj.
+  ## Classes
+  
+  ### Vertex
+  A classe `Vertex` representa um ponto no espaço tridimensional. Ela contém três atributos (`x`, `y` e `z`) para armazenar as coordenadas do ponto. Essa classe é utilizada para definir os vértices de um modelo 3D.
 
+  ### Face
+  A classe `Face` representa uma face triangular em um modelo 3D. Ela é definida por três índices de vértices (`v1`, `v2` e `v3`). Esses índices correspondem aos vértices que compõem a face triangular.
+
+  ### ObjLoader
+  A classe `ObjLoader` é responsável por carregar e salvar modelos 3D no formato de arquivo Wavefront OBJ. Ela contém listas para armazenar vértices, normais e faces. O método `loadObj` lê um arquivo OBJ e popula essas listas, enquanto o método `saveObj` salva o modelo carregado como um arquivo OBJ. Essa classe atua como um carregador simples de modelos 3D e é o ponto principal para utilizar a funcionalidade.
 </details>
